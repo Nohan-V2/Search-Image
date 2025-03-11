@@ -1,7 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+html {
+    user-select: none;
+    overscroll-behavior: smooth;
+}
 
 img {
     width: 100%;
+}
+
+.stop-scrolling {
+    overflow: hidden;
 }
 
 .hidden {
@@ -13,10 +26,10 @@ img {
 }
 
 .gallery-header {
-  text-align: center;
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
-  margin-bottom: 3rem;
+    text-align: center;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    margin-bottom: 3rem;
 }
 
 .search-input {
@@ -74,6 +87,7 @@ img {
 }
 
 .lightbox-content {
+    position: relative;
     max-width: 768px;
     color: #FFF;
 
@@ -82,7 +96,31 @@ img {
         margin-bottom: 1.5rem;
     }
 
+    svg {
+        position: absolute;
+        fill: white;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+    }
+
+    .lightbox-arrow-left {
+        left: -5%;
+        top: 40%;
+    }
+
+    .lightbox-arrow-right {
+        right: -5%;
+        top: 40%;
+    }
+
+    .lightbox-close {
+        top: 0;
+        right: 0;
+    }
+
     p {
+        text-align: center;
         font-size: 1.5rem;
     }
 }
