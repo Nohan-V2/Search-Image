@@ -74,5 +74,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
     $closeModal.addEventListener("click", (e) => {
       $modal.classList.add("hidden");
     });
+
+    // Close modal with Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        $closeModal.click();
+      }
+    });
   });
 });
